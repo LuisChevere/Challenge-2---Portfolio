@@ -1,16 +1,39 @@
 * {
     box-sizing: border-box;
   }
+
+  :root {
+    --outer-space: #33393f;
+    --grey: #767777;
+    --gin: #e0eae4;
+    --heliotrope: white;
+  }
+  
+  ::selection {
+    background-color: var(--grey);
+    color: var(--outer-space);
+  }
   
   body {
-    font-family: Arial;
-    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--gin);
+    background-color: var(--outer-space);
+  }
+
+  code {
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+      'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+      'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+      monospace;
   }
   
   header {
     padding: 40px;
     text-align: right;
-    background: #13293d;
+    background: #000000;
     color: #fff;
   }
 
@@ -20,11 +43,6 @@
   
   h3 {
    
-  }
-
-
-nav {
-    background-color: transparent;
   }
 
 nav a {
@@ -37,10 +55,106 @@ main {
     display: flex;
     flex-wrap: wrap;
   }
-  
-  aside {
-    flex: 1;
-    background-color: white;
-    padding: 80px;
-    text-align: center;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
+  
+  .justify-right{
+    justify-content: right;
+  }
+
+  .card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+  }
+
+  .code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .code-card .card-header {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    color: var(--heliotrope);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .code-card:hover,
+  .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+  }
+
+  .code-card .code-block {
+    flex-grow: 1;
+  }
+  .div.first_container {
+
+  }
+
+  div.second_container {
+
+  }
+
+  p {
+    margin-bottom: 1rem;
+}
+
+.code-card pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  tab-size: 4;
+  padding: 1.2rem 1rem;
+  color: var(--gin);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+  
+
+element.style {
+}
+
+.code-card pre:active {
+  user-select: all;
+}
+
+
+@media screen and (min-width: 768px) {
+  .card-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+
+  .card-column:last-child {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .card-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
