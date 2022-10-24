@@ -55,14 +55,6 @@ main {
     display: flex;
     flex-wrap: wrap;
   }
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
   
   .justify-right{
     justify-content: right;
@@ -77,14 +69,78 @@ main {
 
   .code-card {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+    outline-offset: -2px;
+    height: 600px;
+    width: 800px;
+
+    outline: 2px solid var(--gin);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .code-card2 {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100%;
     padding: 2rem;
     color: var(--heliotrope);
     outline-offset: -2px;
+    height: 150px;
+    width: 300px;
+
+    outline: 2px solid var(--gin);
+    outline-offset: -2px;
     transition: all 0.5s ease-in-out;
   }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    outline: #000000;
+    outline-width: 5px;
+    width: 800px;
+    height: 600px;
+  }
+ 
+
+  .image-gallery2 > li {
+    flex-basis: 400px;
+    position: relative;
+    cursor: pointer;
+   }
+
+   .image-gallery > li {
+    flex-basis: 800px;
+    position: relative;
+    cursor: pointer;
+   }
+
+   .image-gallery li img {
+    object-fit: cover;
+    width: auto;
+    width:auto;
+    vertical-align: left;
+   }
+
+   .brighten img {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition:  all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+   }
+
+   .brighten img:hover {
+    -webkit-filter: brightness(100%);
+   }
 
   .code-card .card-header {
     position: relative;
@@ -101,16 +157,36 @@ main {
     box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
   }
 
+  .code-card2:hover,
+  .code-card2:hover .card-header {
+    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+  }
+
   .code-card .code-block {
     flex-grow: 1;
   }
+
   .div.first_container {
+      position: relative;
+      margin: -4rem 0 1.5rem 0;
+      padding: 0.5rem 1rem;
+      background-color: var(--outer-space);
+      color: var(--heliotrope);
+      border: 2px solid var(--gin);
+      border-radius: 8px;
+      transition: all 0.5s ease-in-out;
+    }
 
-  }
-
-  div.second_container {
-
-  }
+  .div.second_container {
+       
+      margin: -4rem 0 1.5rem 0;
+      padding: 0.5rem 1rem;
+      background-color: var(--outer-space);
+      color: var(--heliotrope);
+      border: 2px solid var(--gin);
+      border-radius: 8px;
+      transition: all 0.5s ease-in-out;
+    }
 
   p {
     margin-bottom: 1rem;
@@ -126,35 +202,7 @@ main {
   display: flex;
   align-items: center;
 }
-  
-
-element.style {
-}
 
 .code-card pre:active {
   user-select: all;
-}
-
-
-@media screen and (min-width: 768px) {
-  .card-column {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-
-  .card-column:last-child {
-    flex-grow: 1;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  header {
-    width: 75%;
-  }
-
-  .card-column {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
 }
