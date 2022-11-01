@@ -16,4 +16,4 @@ When you approach the footer of the page, you will see contact information, such
 
 [Deployed Link Here](https://luischevere.github.io/Challenge-2Portfolio/)
 
-![site image](/Challenge%202/assets/images/Screen%20Shot%20Porfolio%20site.png)
+[!site image](https://raw.githubusercontent.com/LuisChevere/Challenge-2Portfolio/91208e9f818dc4093d0f2f5acb1112105e8edce7/assets/images/ScreenShotPorfoliosite.png)
